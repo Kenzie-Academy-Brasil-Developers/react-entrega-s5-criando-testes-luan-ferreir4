@@ -1,6 +1,6 @@
 context("CEP search", ()=>{
     it("should access the app page",()=>{
-        cy.visit('http://localhost:3000')
+        cy.visit('https://react-entrega-s5-criando-testes-luan-ferreir4.vercel.app/')
         cy.viewport(1440,900)
     })
     it("should search for an address",()=>{
@@ -23,7 +23,7 @@ context("CEP search", ()=>{
               }
         });
 
-        cy.get("input[type=number]").type(73330026);
+        cy.get("input[type=number]").type(70040010);
         cy.get('button[data-testid=button-search]').click();
 
         cy.contains("Logradouro")
